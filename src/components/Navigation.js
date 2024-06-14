@@ -16,17 +16,21 @@ const Navigation = () => {
 
     const getLinkStyle = (path) => {
         if (location.pathname === '/Apropos') {
-            if (path === '/Accueil' || path === '/Contact' || path === '/Apropos') {
+            if (path === '/Accueil' || path === '/Contact' || path === '/Apropos' || path ==='Projets') {
                 return { color: '#39375B' };
             }
         }
         return { color: '#FFD700' }; // jaune
     };
 
-    // Ajoutez cette fonction pour obtenir la classe conditionnelle pour le navbar_burger
     const getBurgerClass = () => {
         return location.pathname === '/Apropos' ? 'navbar__burger red' : 'navbar__burger';
     };
+
+    // Condition pour ne pas afficher la navigation sur la page Accueil
+    if (location.pathname === '/Home') {
+        return null; // Renvoie null pour ne rien afficher
+    }
 
     return (
         <div className={`navigation ${showLinks ? "show-nav" : "hide-nav"}`}>
@@ -51,7 +55,6 @@ const Navigation = () => {
                 <li className={`navbar__item ${location.pathname === '/Mes Projets' ? 'active' : ''}`} style={getLinkStyle('/Projets')}>
                     <NavLink to="/Projets">Projets</NavLink>
                 </li>
-             
                 <li className={`navbar__item ${location.pathname === '/Apropos' ? 'active' : ''}`} style={getLinkStyle('/Apropos')}>
                     <NavLink to="/Apropos">À propos</NavLink>
                 </li>
