@@ -5,6 +5,7 @@ import Accueil from './pages/Accueil';
 import Contact from './pages/Contact';
 import Apropos from './pages/Apropos';
 import Home from './pages/Home';
+import Projets from './pages/Projets';
 import Navigation from './components/Navigation';
 
 const App = () => {
@@ -27,6 +28,7 @@ const AnimatedRoutes = () => {
         <Route path="/Accueil" element={<PageWrapper><Accueil /></PageWrapper>} />
         <Route path="/Contact" element={<PageWrapper><Contact /></PageWrapper>} />
         <Route path="/APropos" element={<PageWrapper><Apropos /></PageWrapper>} />
+        <Route path="/Projets" element={<PageWrapper><Projets /></PageWrapper>} />
       </Routes>
     </AnimatePresence>
   );
