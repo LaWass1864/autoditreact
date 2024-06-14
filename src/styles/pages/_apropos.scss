@@ -1,35 +1,32 @@
-  // page a propos
-    
-  .apropos-container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    /* 50% 50% des colonnes */
-    justify-items: center;
-    
-    @media (min-height: 680px), screen and (orientation: portrait) { 
-      display: flex;
-      flex-direction: column;
-     }
+// Styles pour la page À propos
 
-     
+.apropos-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-items: center;
+
+  @media (max-width: 680px), (orientation: portrait) {
+    grid-template-columns: 1fr; // Une colonne pour les petits écrans ou en mode portrait
+  }
+  
 .left {
   display: flex;
-      flex-direction: column;
-      padding: 80px;
-}
+  flex-direction: column;
 
-.avatar-container {
-  margin-bottom: 20px;
 }
 
 .right {
   display: flex;
-  justify-content: flex-end;
+  flex-direction: column;
+  justify-content: flex-start; // Alignement en haut pour la colonne de droite
+  align-items: center; // Centrage vertical du contenu dans la colonne droite
+  padding: 80px;
 }
 
 .badges {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-gap: 20px; // Espacement entre les badges
   margin-top: 50px;
 }
 
@@ -38,15 +35,15 @@
   padding: 10px; /* Espacement intérieur */
   margin: 10px; /* Espacement extérieur */
   border-radius: 12px;
+  text-align: center; // Centrage du contenu dans chaque badge
 }
 
 .qr-code {
   width: 100%;
   height: auto;
-  max-width: 80px;
-  max-height: 80px;
+  max-width: 150px; // Ajustez la taille du QR code selon vos besoins
+  margin-top: 10px; // Marge supérieure pour espacement
 }
 
-  }
+}
 
-  
