@@ -11,7 +11,7 @@ const Apropos = () => {
 
   // Fonction pour déterminer l'icône de chaque langage
   const langageIcon = (langage) => {
-    if (langage === "Figma" || langage === "Webdesign" || langage === "UxDesign") {
+    if (langage === "Figma" || langage === "Webdesign" || langage === "UxDesign" || langage === "Wireframe") {
       return '🎨';
     } else if (langage === "GitHub" || langage === "Responsive" || langage === "Html/Css/Sass" || langage === "ReactJs" || langage === "API" || langage === "SwiftUi" || langage === "JavaScript") {
       return '💻';
