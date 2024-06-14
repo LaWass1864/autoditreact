@@ -28,9 +28,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr; // Deux colonnes pour les badges
   grid-gap: 10px; // Espacement entre les badges
-  cursor: grab;
-
-
+  
 
   @media (max-width: 680px), (orientation: portrait) {
     grid-template-columns: 1fr; // Une colonne pour les petits écrans ou en mode portrait
@@ -42,7 +40,8 @@
   padding: 10px; // Espacement intérieur
   margin: 10px; // Espacement extérieur
   border-radius: 12px; // Coins arrondis
-  text-align: center; // Centrage du contenu dans chaque badge
+  text-align: left; // Centrage du contenu dans chaque badge
+  cursor: grab;
 }
 
 .qr-code {
