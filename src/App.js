@@ -33,6 +33,11 @@ const AnimatedRoutes = () => {
 };
 
 const PageWrapper = ({ children }) => {
+  const location = useLocation();
+
+  // Vérifie si l'URL actuelle est différente de '/Home' pour afficher la Navigation
+  const showNavigation = location.pathname !== '/Home';
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 50 }}
@@ -40,6 +45,7 @@ const PageWrapper = ({ children }) => {
       exit={{ opacity: 0, y: -50 }}
       transition={{ duration: 0.5 }}
     >
+      {showNavigation && <Navigation />}
       {children}
     </motion.div>
   );
