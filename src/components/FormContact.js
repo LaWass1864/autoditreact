@@ -9,7 +9,7 @@ export const FormContact = () => {
         const formMess = document.querySelector(".form-message")
 
         emailjs
-            .sendForm('service_mxw5oru', 'template_rspn9qe', form.current, {
+            .sendForm('service_57t1xy2', 'template_rspn9qe', form.current, {
                 publicKey: 'oCpRBtFl9XwOD5fyi',
             })
             .then((result) => {
