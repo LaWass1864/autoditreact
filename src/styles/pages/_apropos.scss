@@ -1,0 +1,52 @@
+  // page a propos
+    
+  .apropos-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    /* 50% 50% des colonnes */
+    justify-items: center;
+    
+    @media (min-height: 680px), screen and (orientation: portrait) { 
+      display: flex;
+      flex-direction: column;
+     }
+
+     
+.left {
+  display: flex;
+      flex-direction: column;
+      padding: 80px;
+}
+
+.avatar-container {
+  margin-bottom: 20px;
+}
+
+.right {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.badges {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin-top: 50px;
+}
+
+.badge {
+  background-color: white; /* Fond blanc */
+  padding: 10px; /* Espacement intérieur */
+  margin: 10px; /* Espacement extérieur */
+  border-radius: 12px;
+}
+
+.qr-code {
+  width: 100%;
+  height: auto;
+  max-width: 80px;
+  max-height: 80px;
+}
+
+  }
+
+  

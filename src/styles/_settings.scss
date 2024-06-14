@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+$font1: "Press Start 2P", system-ui;
+$font2: "Poppins", sans-serif;
+$font3: "Bebas Neue", sans-serif;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: $font2;
+  overflow-y: auto;
+
+}
+
+
+// background des pages
+.accueil-background {
+  background-image: linear-gradient(to right top, #39375b, #564e71, #746687, #91809e, #af9bb6);
+  min-height: 100vh;
+}
+
+.projets-background {
+  background-image: linear-gradient(to right bottom, #136f63, #005c69, #004767, #133158, #2b193d);
+  min-height: 100vh;
+}
+
+.contact-background {
+  background-image: linear-gradient(to right top, #39375b, #564e71, #746687, #91809e, #af9bb6);
+  min-height: 100vh;
+}
+
+.apropos-background {
+  background-image: linear-gradient(to bottom, #dad7cd, #c6ac94, #b87d6b, #a64c57, #861657);
+  min-height: 100vh;
+}
+
+// page d'unboarding
+.square_btn {
+  position: relative;
+  display: inline-block;
+  font-weight: bold;
+  padding: 7px 10px 10px 10px;
+  text-decoration: none;
+  color: #FFF;
+  background: #a180dc;
+  transition: .4s;
+  margin-top: 20px;
+  font-family: $font2;
+  padding: 15px;
+  border-radius: 14px;
+  cursor: pointer;
+
+  >span {
+    border-bottom: solid 2px #FFF;
+  }
+
+  &:hover {
+    background: #91b5fb;
+  }
+
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  border-radius: 20px;
+  justify-content: center; /* Centre horizontalement */
+  align-items: center; /* Centre verticalement */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border: 1px solid #888;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 600px;
+  overflow: auto;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+
+  
+}
+
+// responsive de tous les H1
+
+h1 {
+  font-size:  clamp(50px, 4vw, 100px);
+}
