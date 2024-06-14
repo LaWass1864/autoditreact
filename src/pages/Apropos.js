@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
-import { Reorder } from 'framer-motion';
+import { useDragControls , Reorder } from 'framer-motion';
 
 const Apropos = () => {
   // Tableau des langages
@@ -20,10 +20,11 @@ const Apropos = () => {
       return '🔍';
     }
   }
-
+  // Mettre les badges sur 2 colonnes
   const halfLength = Math.ceil(langages.length / 2);
   const langagesCol1 = langages.slice(0, halfLength);
   const langagesCol2 = langages.slice(halfLength);
+  const controls = useDragControls()
 
   return (
     <main className='apropos-background'>
@@ -43,9 +44,9 @@ const Apropos = () => {
           </div>
         </div>
 
-        <div className="right badges animate__animated animate__fadeIn">
+        <div className="right badges">
           <div className="column">
-            <Reorder.Group axis="y" values={langagesCol1} onReorder={(newOrder) => setLangages([...newOrder, ...langagesCol2])}>
+            <Reorder.Group axis="y" values={langagesCol1}  dragListener={false} dragControls={controls} onReorder={(newOrder) => setLangages([...newOrder, ...langagesCol2]) }>
               {langagesCol1.map((langage) => (
                 <Reorder.Item key={langage} value={langage}>
                   <div className="badge">

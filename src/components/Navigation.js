@@ -48,6 +48,9 @@ const Navigation = () => {
                 <li className={`navbar__item ${location.pathname === '/Contact' ? 'active' : ''}`} style={getLinkStyle('/Contact')}>
                     <NavLink to="/Contact">Contact</NavLink>
                 </li>
+                <li className={`navbar__item ${location.pathname === '/Mes Projets' ? 'active' : ''}`} style={getLinkStyle('/Projets')}>
+                    <NavLink to="/Projets">Projets</NavLink>
+                </li>
              
                 <li className={`navbar__item ${location.pathname === '/Apropos' ? 'active' : ''}`} style={getLinkStyle('/Apropos')}>
                     <NavLink to="/Apropos">À propos</NavLink>
