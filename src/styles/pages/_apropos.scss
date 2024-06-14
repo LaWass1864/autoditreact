@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr; // Deux colonnes égales
   justify-items: center; // Centrage horizontal des éléments
 
+
   @media (max-width: 680px), (orientation: portrait) {
     grid-template-columns: 1fr; // Une colonne pour les petits écrans ou en mode portrait
   }
@@ -11,6 +12,7 @@
 .left {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .right {
@@ -19,13 +21,19 @@
   justify-content: flex-start; // Alignement en haut pour la colonne de droite
   align-items: center; // Centrage vertical du contenu dans la colonne droite
   padding: 80px;
+  margin-top: 50px;
 }
 
 .badges {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); // Deux colonnes pour les badges
+  grid-template-columns: 1fr 1fr; // Deux colonnes pour les badges
   grid-gap: 10px; // Espacement entre les badges
-  margin-top: 50px; // Marge supérieure pour espacement
+
+
+
+  @media (max-width: 680px), (orientation: portrait) {
+    grid-template-columns: 1fr; // Une colonne pour les petits écrans ou en mode portrait
+  }
 }
 
 .badge {

@@ -1,13 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navigation from '../components/Navigation';
+import { Reorder } from 'framer-motion';
 
 const Apropos = () => {
   // Tableau des langages
-  let langages = [
+  const [langages, setLangages] = useState([
     "Figma", "JavaScript", "ReactJs", "Html/Css/Sass", "GitHub",
     "Webdesign", "Recherche utilisateur", "SwiftUi", "API",
-    "Responsive", "UxDesign", "Wireframe" 
-  ];
+    "Responsive", "UxDesign", "Wireframe"
+  ]);
 
   // Fonction pour déterminer l'icône de chaque langage
   const langageIcon = (langage) => {
@@ -19,6 +20,10 @@ const Apropos = () => {
       return '🔍';
     }
   }
+
+  const halfLength = Math.ceil(langages.length / 2);
+  const langagesCol1 = langages.slice(0, halfLength);
+  const langagesCol2 = langages.slice(halfLength);
 
   return (
     <main className='apropos-background'>
@@ -39,16 +44,32 @@ const Apropos = () => {
         </div>
 
         <div className="right badges animate__animated animate__fadeIn">
-          {langages.map((langage, index) => (
-            <div className="badge" key={index}>
-              {langage !== "QR Code" ? (
-                <span>
-                  {langageIcon(langage)}
-                  {langage}
-                </span>
-              ) : null}
-            </div>
-          ))}
+          <div className="column">
+            <Reorder.Group axis="y" values={langagesCol1} onReorder={(newOrder) => setLangages([...newOrder, ...langagesCol2])}>
+              {langagesCol1.map((langage) => (
+                <Reorder.Item key={langage} value={langage}>
+                  <div className="badge">
+                    <span>
+                      {langageIcon(langage)} {langage}
+                    </span>
+                  </div>
+                </Reorder.Item>
+              ))}
+            </Reorder.Group>
+          </div>
+          <div className="column">
+            <Reorder.Group axis="y" values={langagesCol2} onReorder={(newOrder) => setLangages([...langagesCol1, ...newOrder])}>
+              {langagesCol2.map((langage) => (
+                <Reorder.Item key={langage} value={langage}>
+                  <div className="badge">
+                    <span>
+                      {langageIcon(langage)} {langage}
+                    </span>
+                  </div>
+                </Reorder.Item>
+              ))}
+            </Reorder.Group>
+          </div>
         </div>
       </div>
     </main>
