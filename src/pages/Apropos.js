@@ -6,7 +6,7 @@ const Apropos = () => {
   let langages = [
     "Figma", "JavaScript", "ReactJs", "Html/Css/Sass", "GitHub",
     "Webdesign", "Recherche utilisateur", "SwiftUi", "API",
-    "Responsive", "UxDesign", "Wireframe" // Ajout de Wireframe
+    "Responsive", "UxDesign", "Wireframe" 
   ];
 
   // Fonction pour déterminer l'icône de chaque langage
