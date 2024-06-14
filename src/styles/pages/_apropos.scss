@@ -1,14 +1,13 @@
-// Styles pour la page À propos
-
 .apropos-container {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  justify-items: center;
+  grid-template-columns: 1fr 1fr; // Deux colonnes égales
+  justify-items: center; // Centrage horizontal des éléments
 
   @media (max-width: 680px), (orientation: portrait) {
     grid-template-columns: 1fr; // Une colonne pour les petits écrans ou en mode portrait
   }
-  
+}
+
 .left {
   display: flex;
   flex-direction: column;
@@ -24,16 +23,16 @@
 
 .badges {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px; // Espacement entre les badges
-  margin-top: 50px;
+  grid-template-columns: repeat(2, 1fr); // Deux colonnes pour les badges
+  grid-gap: 10px; // Espacement entre les badges
+  margin-top: 50px; // Marge supérieure pour espacement
 }
 
 .badge {
-  background-color: white; /* Fond blanc */
-  padding: 10px; /* Espacement intérieur */
-  margin: 10px; /* Espacement extérieur */
-  border-radius: 12px;
+  background-color: white; // Fond blanc
+  padding: 10px; // Espacement intérieur
+  margin: 10px; // Espacement extérieur
+  border-radius: 12px; // Coins arrondis
   text-align: center; // Centrage du contenu dans chaque badge
 }
 
@@ -43,6 +42,3 @@
   max-width: 150px; // Ajustez la taille du QR code selon vos besoins
   margin-top: 10px; // Marge supérieure pour espacement
 }
-
-}
-
