@@ -3,11 +3,6 @@
   grid-template-columns: 1fr 1fr; // Deux colonnes égales
   justify-items: center; // Centrage horizontal des éléments
 
-
-  @media (max-width: 680px), (orientation: portrait) {
-    grid-template-columns: 1fr; // Une colonne pour les petits écrans ou en mode portrait
-    text-align: center;
-  }
 }
 
 .left {
@@ -29,11 +24,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr; // Deux colonnes pour les badges
   grid-gap: 10px; // Espacement entre les badges
-  
-  @media (max-width: 680px), (orientation: portrait) {
-    grid-template-columns: 1fr; // Une colonne pour les petits écrans ou en mode portrait
-    margin-top: -150px;
-  }
+
 }
 
 .badge {
