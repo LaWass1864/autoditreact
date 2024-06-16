@@ -37,7 +37,7 @@ const Apropos = () => {
             <h4>France</h4>
             <div className="role">
               <p>Développeuse front-end</p>
-              <p>UX/UI Designer</p>
+     
               {/* QR Code ici */}
               <img className="qr-code" src="/assets/image/qrcode.png" alt="QR Code" />
             </div>
